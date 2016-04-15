@@ -4,7 +4,7 @@
   "description": "Unescape JavaScript special characters",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel src/index.js -o dist/index.js",
+    "build": "babel src -d dist",
     "pretest": "npm run build",
     "test": "ava test/index.js",
     "prepublish": "npm test",
