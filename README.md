@@ -21,6 +21,9 @@ console.log(unescapeJs('Hello,\\nworld!'));
 
 console.log(unescapeJs('Copyright \\u00A9'));
 // Copyright ©
+
+console.log(unescapeJs('\\u{1F604}'));
+// 😄
 ```
 
 ## License
