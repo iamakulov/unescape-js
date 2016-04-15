@@ -17,7 +17,9 @@
     "url": "git+https://github.com/iamakulov/unescape-js.git"
   },
   "keywords": [
-    "unescape"
+    "unescape",
+    "escape sequences",
+    "special characters"
   ],
   "author": "Ivan Akulov <mail@iamakulov.com> (http://iamakulov.com/)",
   "license": "MIT",
