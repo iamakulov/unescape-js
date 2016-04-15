@@ -12,7 +12,7 @@ npm install --save unescape-js
     
 ## Usage
 
-`unescape-js` supports all JavaScript escape sequences including ES2015 Unicode code point escapes (`\u{XXXXX}`). 
+`unescape-js` supports all JavaScript escape sequences described [on the according MDN page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Using_special_characters_in_strings) including ES2015 Unicode code point escapes (`\u{XXXXX}`). 
 
 ```js
 var unescapeJs = require('unescape-js');
