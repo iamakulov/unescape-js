@@ -9,7 +9,7 @@
     "test": "ava test/index.js",
     "prepublish": "npm test",
     "coverage": "nyc --reporter=text-lcov npm test",
-    "precoverage-coveralls": "nyc ava test/index.js",
+    "precoverage-coveralls": "nyc npm test",
     "coverage-coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
