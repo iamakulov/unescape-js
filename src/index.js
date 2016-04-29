@@ -28,7 +28,7 @@ const createUnescaper = (regexp, base) => {
 const unescapeOctSequence = createUnescaper(/\\(\d\d\d)/g, 8);
 
 /**
- * Unescape hexadecimal sequences with constant 2-digit (\xA9, \x72 etc.)
+ * Unescape hexadecimal sequences with constant 2-digit length (\xA9, \x72 etc.)
  */
 const unescapeShortHexSequence = createUnescaper(/\\x([0-9A-Fa-f]{2})/g, 16);
 
