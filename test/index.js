@@ -17,6 +17,7 @@ test('usual escape sequences', t => {
 test('octal escape sequences', t => {
     // '---S---' instead of '---\123---' because octal literals are prohibited in strict mode
     t.is(unescapeJs('---\\123---'), '---S---');
+    t.is(unescapeJs('---\\040---'), '--- ---');
 });
 
 test('short hex escape sequences', t => {
@@ -30,4 +31,9 @@ test('long hex escape sequences', t => {
 test('variable hex escape sequences', t => {
     t.is(unescapeJs('---\\u{A9}---'), '---\u{A9}---');
     t.is(unescapeJs('---\\u{2F804}---'), '---\u{2F804}---');
+});
+
+test('avoids double unescape cascade', t => {
+    t.is(unescapeJs('---\\\\x41---'), '---\\x41---');
+    t.is(unescapeJs('---\\x5cx41---'), '---\\x41---');
 });
