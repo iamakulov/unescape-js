@@ -11,10 +11,10 @@ import 'string.fromcodepoint';
  * | 
  *   (\d{3}) - fourth alternative; matches the 3-digit octal escape sequence (\512)
  * | 
- *   (['"tbrnfv0/\\]) - fifth alternative; matches the special escape characters (\t, \n and so on)
+ *   (['"tbrnfv0\\]) - fifth alternative; matches the special escape characters (\t, \n and so on)
  * )
  */
-const jsEscapeRegex = /\\(u\{([0-9A-Fa-f]+)\}|u([0-9A-Fa-f]{4})|x([0-9A-Fa-f]{2})|(\d{3})|(['"tbrnfv0/\\]))/g;
+const jsEscapeRegex = /\\(u\{([0-9A-Fa-f]+)\}|u([0-9A-Fa-f]{4})|x([0-9A-Fa-f]{2})|(\d{3})|(['"tbrnfv0\\]))/g;
 
 const usualEscapeSequences = {
     '0': '\0',
