@@ -9,12 +9,12 @@ import 'string.fromcodepoint';
  * | 
  *   x([0-9A-Fa-f]{2}) - third alternative; matches the 2-digit hexadecimal escape sequence (\xA5)
  * | 
- *   (\d{3}) - fourth alternative; matches the 3-digit octal escape sequence (\512)
+ *   ([1-7][0-7]{0,2}|[0-7]{2,3}) - fourth alternative; matches the up-to-3-digit octal escape sequence (\5 or \512)
  * | 
  *   (['"tbrnfv0\\]) - fifth alternative; matches the special escape characters (\t, \n and so on)
  * )
  */
-const jsEscapeRegex = /\\(u\{([0-9A-Fa-f]+)\}|u([0-9A-Fa-f]{4})|x([0-9A-Fa-f]{2})|(\d{3})|(['"tbrnfv0\\]))/g;
+const jsEscapeRegex = /\\(u\{([0-9A-Fa-f]+)\}|u([0-9A-Fa-f]{4})|x([0-9A-Fa-f]{2})|([1-7][0-7]{0,2}|[0-7]{2,3})|(['"tbrnfv0\\]))/g;
 
 const usualEscapeSequences = {
     '0': '\0',

@@ -18,6 +18,8 @@ test('octal escape sequences', t => {
     // '---S---' instead of '---\123---' because octal literals are prohibited in strict mode
     t.is(unescapeJs('---\\123---'), '---S---');
     t.is(unescapeJs('---\\040---'), '--- ---');
+    t.is(unescapeJs('---\\54---'), '---,---');
+    t.is(unescapeJs('---\\4---'), '---\u{4}---');
 });
 
 test('short hex escape sequences', t => {
