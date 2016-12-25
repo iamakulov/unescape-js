@@ -33,17 +33,17 @@ const fromHex = (str) => String.fromCodePoint(parseInt(str, 16));
 const fromOct = (str) => String.fromCodePoint(parseInt(str, 8));
 
 export default (string) => {
-    return string.replace(jsEscapeRegex, (_, match, longHex, varHex, shortHex, octal) => {
-        if (shortHex !== undefined) {
-            return fromHex(shortHex);
-        } else if (varHex !== undefined) {
+    return string.replace(jsEscapeRegex, (_, __, varHex, longHex, shortHex, octal, specialCharacter) => {
+        if (varHex !== undefined) {
             return fromHex(varHex);
         } else if (longHex !== undefined) {
             return fromHex(longHex);
+        } else if (shortHex !== undefined) {
+            return fromHex(shortHex);
         } else if (octal !== undefined) {
             return fromOct(octal);
         } else {
-            return usualEscapeSequences[match];
+            return usualEscapeSequences[specialCharacter];
         }
     });
 }
