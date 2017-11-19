@@ -41,6 +41,6 @@ test('avoids double unescape cascade', t => {
 });
 
 test('python hex escape sequences', t => {
-    t.is(unescapeJs('---\U000000A9---'), '---\u00A9---');
-    t.is(unescapeJs('---\U0001F3B5---'), '---\uD83C\uDFB5---');
+    t.is(unescapeJs('---\\U000000A9---'), '---\u00A9---');
+    t.is(unescapeJs('---\\U0001F3B5---'), '---\uD83C\uDFB5---');
 });
