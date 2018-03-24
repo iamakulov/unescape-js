@@ -11,7 +11,7 @@
 ## Install
 
 ```sh
-npm i unescape-js
+npm install unescape-js
 ```
 
 ```js
