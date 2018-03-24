@@ -26,9 +26,7 @@
       "./node_modules/.bin/eslint src/*.js test/*.js && nyc --reporter=html --reporter=text ava"
   },
   "keywords": ["unescape", "escape", "sequences", "special", "characters"],
-  "dependencies": {
-    "string.fromcodepoint": "^0.2.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "ava": "*",
     "babel-cli": "^6.26.0",

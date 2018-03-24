@@ -1,7 +1,5 @@
 'use strict';
 
-require('string.fromcodepoint');
-
 /**
  * \\ - matches the backslash which indicates the beginning of an escape sequence
  * (
