@@ -5,11 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.2.0] - 2018-03-24
+## [2.0.0] - 2018-03-25
 
 ### Added
 
-* ✨ Merged https://github.com/iamakulov/unescape-js/pull/3 - thanks [revelt](https://github.com/revelt) - adds:
+* ✨ Merged https://github.com/iamakulov/unescape-js/pull/4 - thanks [revelt](https://github.com/revelt) - adds:
 
 - Set up Rollup, generating three builds: CommonJS, UMD and ES Modules
 - Set up ESLint and Prettier and wired together
@@ -90,7 +90,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 * ✨ First public commit
 
-[1.2.0]: https://github.com/iamakulov/unescape-js/compare/v1.1.0...v1.2.0
+[2.0.0]: https://github.com/iamakulov/unescape-js/compare/v1.1.0...v2.0.0
 [1.1.0]: https://github.com/iamakulov/unescape-js/compare/v1.0.8...v1.1.0
 [1.0.8]: https://github.com/iamakulov/unescape-js/compare/v1.0.7...v1.0.8
 [1.0.7]: https://github.com/iamakulov/unescape-js/compare/v1.0.6...v1.0.7
