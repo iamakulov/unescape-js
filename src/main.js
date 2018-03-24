@@ -34,7 +34,7 @@ const usualEscapeSequences = {
 const fromHex = str => String.fromCodePoint(parseInt(str, 16));
 const fromOct = str => String.fromCodePoint(parseInt(str, 8));
 
-export default string => {
+function unescape(string) {
   return string.replace(
     jsEscapeRegex,
     (_, __, varHex, longHex, shortHex, octal, specialCharacter, python) => {
@@ -52,4 +52,6 @@ export default string => {
       return usualEscapeSequences[specialCharacter];
     }
   );
-};
+}
+
+export default unescape;
