@@ -1,0 +1,16 @@
+# folders:
+
+.nyc_output
+coverage
+src
+test
+
+# files:
+
+.babelrc
+.eslintrc.json
+.gitignore
+.npmignore
+.prettierignore
+.travis.yml
+rollup.config.js

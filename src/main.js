@@ -1,4 +1,4 @@
-import 'string.fromcodepoint';
+import "string.fromcodepoint";
 
 /**
  * \\ - matches the backslash which indicates the beginning of an escape sequence
@@ -19,35 +19,37 @@ import 'string.fromcodepoint';
 const jsEscapeRegex = /\\(u\{([0-9A-Fa-f]+)\}|u([0-9A-Fa-f]{4})|x([0-9A-Fa-f]{2})|([1-7][0-7]{0,2}|[0-7]{2,3})|(['"tbrnfv0\\]))|\\U([0-9A-Fa-f]{8})/g;
 
 const usualEscapeSequences = {
-    '0': '\0',
-    'b': '\b',
-    'f': '\f',
-    'n': '\n',
-    'r': '\r',
-    't': '\t',
-    'v': '\v',
-    '\'': '\'',
-    '"': '"',
-    '\\': '\\'
+  "0": "\0",
+  b: "\b",
+  f: "\f",
+  n: "\n",
+  r: "\r",
+  t: "\t",
+  v: "\v",
+  "'": "'",
+  '"': '"',
+  "\\": "\\"
 };
 
-const fromHex = (str) => String.fromCodePoint(parseInt(str, 16));
-const fromOct = (str) => String.fromCodePoint(parseInt(str, 8));
+const fromHex = str => String.fromCodePoint(parseInt(str, 16));
+const fromOct = str => String.fromCodePoint(parseInt(str, 8));
 
-export default (string) => {
-    return string.replace(jsEscapeRegex, (_, __, varHex, longHex, shortHex, octal, specialCharacter, python) => {
-        if (varHex !== undefined) {
-            return fromHex(varHex);
-        } else if (longHex !== undefined) {
-            return fromHex(longHex);
-        } else if (shortHex !== undefined) {
-            return fromHex(shortHex);
-        } else if (octal !== undefined) {
-            return fromOct(octal);
-        } else if (python !== undefined) {
-            return fromHex(python);
-        } else {
-            return usualEscapeSequences[specialCharacter];
-        }
-    });
-}
+export default string => {
+  return string.replace(
+    jsEscapeRegex,
+    (_, __, varHex, longHex, shortHex, octal, specialCharacter, python) => {
+      if (varHex !== undefined) {
+        return fromHex(varHex);
+      } else if (longHex !== undefined) {
+        return fromHex(longHex);
+      } else if (shortHex !== undefined) {
+        return fromHex(shortHex);
+      } else if (octal !== undefined) {
+        return fromOct(octal);
+      } else if (python !== undefined) {
+        return fromHex(python);
+      }
+      return usualEscapeSequences[specialCharacter];
+    }
+  );
+};
