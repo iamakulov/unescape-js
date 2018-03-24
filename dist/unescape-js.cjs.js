@@ -40,7 +40,7 @@ var fromOct = function fromOct(str) {
   return String.fromCodePoint(parseInt(str, 8));
 };
 
-var main = (function (string) {
+function unescape(string) {
   return string.replace(jsEscapeRegex, function (_, __, varHex, longHex, shortHex, octal, specialCharacter, python) {
     if (varHex !== undefined) {
       return fromHex(varHex);
@@ -55,6 +55,6 @@ var main = (function (string) {
     }
     return usualEscapeSequences[specialCharacter];
   });
-});
+}
 
-module.exports = main;
+module.exports = unescape;
