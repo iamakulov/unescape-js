@@ -82,5 +82,5 @@ MIT © [Ivan Akulov](http://iamakulov.com)
 [contributors-img]: https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square
 [contributors-url]: #contributors
 [licence-img]: https://img.shields.io/npm/l/unescape-js.svg?style=flat-square
-[licence-url]: https://github.com/iamakulov/unescape-js/blob/master/LICENCE
+[licence-url]: https://github.com/iamakulov/unescape-js/blob/master/LICENSE
 [all-contributors-url]: https://github.com/kentcdodds/all-contributors
