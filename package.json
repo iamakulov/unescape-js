@@ -19,7 +19,9 @@
     "build": "rollup -c",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "dev": "rollup -c -w",
-    "precommit": "pretty-quick --staged && npm test",
+    "format":
+      "prettier '*.{js,ts,css,less,scss,vue,gql,md}' --write && ./node_modules/.bin/eslint src/*.js test/*.js --fix",
+    "precommit": "npm run format && npm test",
     "prepare": "npm run build",
     "pretest": "npm run build",
     "test":
@@ -40,7 +42,6 @@
     "husky": "*",
     "nyc": "*",
     "prettier": "1.11.1",
-    "pretty-quick": "^1.4.1",
     "rollup": "^0.57.1",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-commonjs": "^9.1.0",
